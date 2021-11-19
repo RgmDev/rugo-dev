@@ -26,7 +26,7 @@ export default function Notebook() {
   });
 
   useEffect(() => {
-    console.log('Notebook page');
+    console.log('Notebook page ');
   });
 
   const list = () => (
