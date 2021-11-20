@@ -6,10 +6,10 @@ import { Fade, Flip, Zoom } from 'react-reveal';
 
 import { NavLinkItems } from '../utils/NavLinkItems'
 
-export default function SignIn() {
+export default function Lobby() {
 
   useEffect(() => {
-    console.log('Lobby page');
+    
   });
 
   return (
@@ -88,7 +88,7 @@ export default function SignIn() {
           }}
         >
         {NavLinkItems.map((item, index) => (
-          <Box sx={{ mt: 2 }}>
+          <Box key={'nav-item-'+index} sx={{ mt: 2 }}>
             <Flip top delay={item.delay} duration={500}><Button as={NavLink} to={item.url}>{item.text}</Button></Flip>
           </Box>
         ))}
