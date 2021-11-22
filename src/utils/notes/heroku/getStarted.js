@@ -19,4 +19,7 @@ export const HEROKU_GET_STARTED_MD = `
 
 ## Open app
     heroku open
+
+## Change memory node parameter
+    heroku config:set NODE_OPTIONS="--max_old_space_size=2560" -a my-app-name
 `;
