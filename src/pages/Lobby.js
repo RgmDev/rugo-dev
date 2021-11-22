@@ -39,7 +39,7 @@ export default function Lobby() {
             <span id='lobby-main-title'>rugo.dev</span>  
           </Fade>
           <Zoom right delay={800} top cascade>
-            <span id='lobby-main-subtitle'>Be code my friends ...</span>
+            <span id='lobby-main-subtitle'>Be code my friend ...</span>
           </Zoom>
               
         </Box>
