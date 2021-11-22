@@ -63,7 +63,24 @@ html body {
   color: var(--color-6);
 }
 
-pre {
+#lobby-linkedin-icon {
+  color: var(--color-2);
+}
+
+#lobby-github-icon {
+  color: var(--color-1);
+}
+
+#lobby-codepen-icon {
+  color: var(--color-3);
+}
+
+img { 
+  max-width: 100%;
+}
+
+/* Markdown output */
+pre code{
   background: #f4f4f4;
   border: 1px solid #ddd;
   border-left: 3px solid var(--color-1);
@@ -79,3 +96,4 @@ pre {
   display: block;
   word-wrap: break-word;
 }
+

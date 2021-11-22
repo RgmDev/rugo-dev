@@ -1,19 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Container, Box, Stack, Button, IconButton  } from '@mui/material';
-import { LogoLinkedin, LogoGithub, LogoCodepen } from 'react-ionicons';
 import { Fade, Flip, Zoom } from 'react-reveal';
 
-import { NavLinkItems } from '../utils/NavLinkItems'
+import { SiGithub, SiLinkedin, SiCodepen } from 'react-icons/si';
+
+import { NavLinkItems } from '../utils/NavLinkItems';
 
 export default function Lobby() {
 
   useEffect(() => {
-    
+    console.log('Lobby page');
+    document.title = "rugo.dev | Lobby"
   });
 
   return (
-    <Container maxWidth="lg">
+    <>
       <Box
         sx={{
           display: 'flex',
@@ -33,48 +35,34 @@ export default function Lobby() {
           alignItems: 'center',
           color: '#F6EFE3',
           }}
-        >
-  
+        > 
           <Fade top cascade>
             <span id='lobby-main-title'>rugo.dev</span>  
           </Fade>
           <Zoom right delay={800} top cascade>
             <span id='lobby-main-subtitle'>Be code my friend ...</span>
           </Zoom>
-              
         </Box>
         <Box>
-          <Stack direction="row" spacing={1}>
+          <Stack direction="row" spacing={2}>
             <Zoom left delay={1500}>
-              <a href='https://www.linkedin.com/in/ruben-gonzalez-martin/' target='_blank'>
+              <a href='https://www.linkedin.com/in/ruben-gonzalez-martin/' target='_blank' rel='noreferrer'>
                 <IconButton color='primary' aria-label='linkedin'>
-                  <LogoLinkedin
-                    color={'#004EB3'}
-                    height='50px'
-                    width='50px'
-                  />
+                  <SiLinkedin size='1.5em' id='lobby-linkedin-icon' />
                 </IconButton>
               </a>
             </Zoom>
             <Zoom bottom delay={2300}>
-              <a href='https://github.com/RgmDev' target='_blank'>
+              <a href='https://github.com/RgmDev' target='_blank' rel='noreferrer'>
                 <IconButton color='primary' aria-label='github'>
-                  <LogoGithub
-                    color={'#EE1C24'} 
-                    height='50px'
-                    width='50px'
-                  />
+                  <SiGithub size='1.5em' id='lobby-github-icon' />
                 </IconButton>
               </a>
             </Zoom>
             <Zoom right delay={1800}>
-              <a href='https://codepen.io/rgmdev' target='_blank'>
+              <a href='https://codepen.io/rgmdev' target='_blank' rel='noreferrer'>
                 <IconButton color='primary' aria-label='codepen'>
-                  <LogoCodepen
-                      color={'#F6EFE3'} 
-                      height='50px'
-                      width='50px'
-                    />
+                  <SiCodepen size='1.5em' id='lobby-codepen-icon' />
                 </IconButton>
               </a>
             </Zoom>
@@ -94,6 +82,6 @@ export default function Lobby() {
         ))}
         </Box>
       </Box>
-    </Container>
+    </>
   )
 }

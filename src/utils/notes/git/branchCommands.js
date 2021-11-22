@@ -1,5 +1,5 @@
 export const GIT_BRANCH_COMMANDS_MD = `
-# BRANCH COMMANDS
+# Branch commands
 
 ## Branches list
     git branch 

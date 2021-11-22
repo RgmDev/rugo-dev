@@ -6,6 +6,7 @@ export default function Contact() {
 
   useEffect(() => {
     console.log('Contact page');
+    document.title = "rugo.dev | Contact"
   })
 
   return (

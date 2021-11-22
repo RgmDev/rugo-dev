@@ -22,4 +22,12 @@ At the command prompt, type \`nano\`.
 ![My avatar!](https://gravatar.com/avatar/4ddbe555b178ae754281e576049f7926?d=https%3A%2F%2Fassets.codepen.io%2Finternal%2Favatars%2Fusers%2Fdefault.png&format=auto&version=0&width=300&height=300 "My avatar")
 
 This **word** is bold. This <em>word</em> is italic.
+
+| Secret name  | Value  |
+|---|---|
+| AWS_PRODUCTION_BUCKET_NAME | Name of S3 bucket |
+| AWS_ACCESS_KEY_ID | IAM user access key |
+| AWS_SECRET_ACCESS_KEY | IAM user secret key |
+| AWS_REGION | Region of S3 bucket |
+
 `;

@@ -6,11 +6,11 @@ export default function Portfolio() {
 
   useEffect(() => {
     console.log('Portfolio page');
+    document.title = "rugo.dev | Portfolio"
   })
 
   return (
     <div>
-      <Navigation />
       <Container maxWidth="lg">
         <h1>PORTFOLIO</h1>
       </Container>

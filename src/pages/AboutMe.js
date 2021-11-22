@@ -6,6 +6,7 @@ export default function AboutMe() {
 
   useEffect(() => {
     console.log('AboutMe page');
+    document.title = "rugo.dev | About Me"
   })
 
   return (
