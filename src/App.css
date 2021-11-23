@@ -102,3 +102,6 @@ pre code{
   word-wrap: break-word;
 }
 
+.css-ha3bif-MuiTimelineItem-root:before {
+  content: none !important;
+}
