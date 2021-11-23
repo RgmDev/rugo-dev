@@ -31,12 +31,17 @@ html body {
   color: var(--color-3) !important;
 }
 
+a {
+  text-decoration: none;
+}
+
 .lobby-nav-links div a {
   text-decoration: none;
   font-family: 'Kampung_Zombie' !important;
   font-size: 1.5rem;
   color: var(--color-3) !important;
 }
+
 
 .lobby-title {
   font-family: 'GhostChase' !important;

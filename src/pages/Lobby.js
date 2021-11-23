@@ -81,6 +81,7 @@ export default function Lobby() {
           </Box>
         ))}
         </Box>
+
       </Box>
     </>
   )
