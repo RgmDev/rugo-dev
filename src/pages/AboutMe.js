@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Navigation from '../components/Navigation';
 import { Container } from '@material-ui/core';
 
-import { styled, Grid, Box, Paper, Button, IconButton } from '@mui/material';
+import { styled, Grid, Box, Paper, Button, IconButton, LinearProgress } from '@mui/material';
 import { SiReact, SiAngular, SiPhp, SiNodedotjs, SiJava, SiJavascript, SiGit, SiMysql } from 'react-icons/si';
 
 import Timeline from '@mui/lab/Timeline';
@@ -20,6 +20,17 @@ import Typography from '@mui/material/Typography';
 
 export default function AboutMe() {
 
+  const stackTech = [
+    { icon: <SiReact size='3em' />, color: 'rgb(97, 218, 251)', value: 70 },
+    { icon: <SiAngular size='3em' />, color: 'rgb(221, 0, 49)', value: 70 },
+    { icon: <SiJavascript size='3em' />, color: 'rgb(240, 219, 79)', value: 70 },
+    { icon: <SiGit size='3em' />, color: 'rgb(243, 79, 41)', value: 70 },
+    { icon: <SiPhp size='3em' />, color: 'rgb(137, 147, 193)', value: 70 },
+    { icon: <SiMysql size='3em' />, color: 'rgb(0, 97, 139)', value: 70 },
+    { icon: <SiNodedotjs size='3em' />, color: 'rgb(144, 197, 63)', value: 70 },
+    { icon: <SiJava size='3em' />, color: 'rgb(238, 31, 37)', value: 70 }
+  ];
+
   useEffect(() => {
     console.log('AboutMe page');
     document.title = "rugo.dev | About Me"
@@ -36,50 +47,23 @@ export default function AboutMe() {
         <h1>Stack Tech</h1>
         <Box sx={{ flexGrow: 1 }}>
           <Grid container spacing={2}>
-            <Grid item xs={12} md={6}>
-                     
-              <IconButton sx={{color: 'rgb(97, 218, 251)', m: '10%'}}>
-                <SiReact size='3em' />
-              </IconButton>
 
-              <IconButton sx={{color: 'rgb(221, 0, 49)', mt:'25%', ml:'15%'}}>
-                <SiAngular size='3em' />
-              </IconButton>
+            {stackTech.map((item, index) => (
+              <Grid item xs={12} md={6}>
+                <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                  <IconButton sx={{color: item.color}}>
+                    { item.icon }
+                  </IconButton>
+                  <Box sx={{ width: '100%', mr: 1, ml: 3 }}>
+                    <LinearProgress variant="determinate" value={item.value} />
+                  </Box>
+                  <Box sx={{ minWidth: 35 }}>
+                    <Typography variant="body2">{item.value+' %'}</Typography>
+                  </Box>
+                </Box>
+              </Grid>
+            ))}
 
-            </Grid>
-            <Grid item xs={12} md={6}>
-
-              <IconButton sx={{color: 'rgb(240, 219, 79)', m: '15%', }}>
-                <SiJavascript size='3em' />
-              </IconButton>
-
-              <IconButton sx={{color: 'rgb(243, 79, 41)', mt:'15%', ml:'20%'}}>
-                <SiGit size='3em' />
-              </IconButton>
-
-            </Grid>
-            <Grid item xs={12} md={6}>
-
-              <IconButton sx={{color: 'rgb(137, 147, 193)', mt: '10%', ml: '25%'}}>
-                <SiPhp size='3em' />
-              </IconButton>
-
-              <IconButton sx={{color: 'rgb(0, 97, 139)', mt:'-5%', ml: '30%'}}>
-                <SiMysql size='3em' />
-              </IconButton>
-
-            </Grid>
-            <Grid item xs={12} md={6}>
-
-            <IconButton sx={{color: 'rgb(144, 197, 63)', m: '15%'}}>
-                <SiNodedotjs size='3em' />
-              </IconButton>
-
-              <IconButton sx={{color: 'rgb(238, 31, 37)', mt:'5%'}}>
-                <SiJava size='3em' />
-              </IconButton>
-
-            </Grid>
           </Grid>
         </Box>
 
